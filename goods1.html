@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,
+		initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\nagao\Pictures\tradingApps_ms\goods1.css">
+		<title>交換表作成ツール</title>
+	</head>
+		<body>
+            <header></header>
+            <form action="" method="post" enctype="multipart/form-data">
+                <ul>
+                    <li>
+                        <label>画像</label> 
+                        <br>
+                        <input type="file" name="pict" accept="image/png, image/jpeg"/>    
+                    </li>    
+                    <li>
+                        <label>名</label>
+                        <br>
+                        <div class="boxsize">
+                            <input type="text" name="desc" >
+                        </div>    
+                    </li>
+                    <li>
+                        <label>種別</label>
+                        <br>
+                        <div class="boxsize">    
+                            <input type="text" name="chara" placeholder="キャラ名やグッズ種別">
+                        </div>    
+                    </li> 
+                    <li>
+                        <label>交換譲渡可能個数</label>
+                        <br>
+                        <input type="number" value="1" 
+                        min="0" max="1000" step="1">   
+                    </li>
+                    <li>
+                        <label>状態</label>
+                        <br>
+                        <label>
+                            <input type="radio" name="state" value="nnew">未開封
+                        </label>
+                        <label>
+                            <input type="radio" name="state" value="opened">開封パケ有
+                        </label>
+                        <label>
+                            <input type="radio" name="state" value="hadaka">裸
+                        </label>        
+                    </li>
+                </ul>
+            </form>
+            <form action="" method="post">
+                <ul>
+                    <li>
+                        <label>条件</label>
+                        <br>
+                        <label>
+                            <input type="radio" name="condition" value="trade" onclick="condradio()">交換希望
+                        </label>
+                        <label>
+                            <input type="radio" name="condition" value="give" onclick="condradio2()">譲渡可
+                        </label>
+                        <br>
+                    </li>
+                </ul>
+            </form>
+            <div id="jouken">
+                <form>
+                    <ul>   
+                        <li>  
+                            <label>交換条件</label>
+                            <br>
+                            <input type="text" name="details">  
+                        </li>       
+                    </ul>    
+                </form>
+            </div>    
+            <script>
+                function condradio(){
+                    document.getElementById("jouken").style.display="block"
+                };
+
+                function condradio2(){
+                    document.getElementById("jouken").style.display="none"
+                };
+            </script>       
+        </body>
+</html>    
