@@ -1,0 +1,14 @@
+/*
+.boxsize{
+    
+}
+
+.detail{
+    display: none;
+}
+
+.judge:checked + .detail{
+    display: block;
+}
+    
+*/
